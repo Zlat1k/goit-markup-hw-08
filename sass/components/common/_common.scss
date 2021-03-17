@@ -1,0 +1,21 @@
+.container {
+    max-width: 1200px;
+    min-width: 320px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.section__header {
+    color: var(--black-text);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.portfolio {
+    background-color: white;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
