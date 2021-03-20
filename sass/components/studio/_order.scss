@@ -7,8 +7,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order__modal {
@@ -19,12 +18,15 @@
     transform: translate(-50%, -50%) scale(1);
     background-color: var(--white-text);
     min-width: 528px;
-    height: 581px;
+    height: 609px;
     border-radius: 4px;
     padding: 40px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-width: 1199px) {
+        min-width: 450px;
+    }
 }
 
 .is-hidden .order__modal {
@@ -76,9 +78,13 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.17;
+    line-height: 1.5;
     letter-spacing: 0.03em;
     text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        line-height: 1.17;
+    }
 }
 
 .form__label {
@@ -148,13 +154,12 @@
 }
 
 .agreement__text {
-    display: flex;
     align-items: center;
-    padding-left: 12px;
+    // padding-left: 12px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: rgba(117, 117, 117, 1);
     cursor: pointer;
@@ -168,6 +173,11 @@
         background-image: url(../images/icon-uncheck.svg);
         background-size: cover;
         border-radius: 2px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
     }
 }
 
@@ -213,7 +223,9 @@
 }
 
 .agreement {
-    display: block;
+    // display: block;
+    display: flex;
+    align-items: center;
     /* margin-bottom: 30px; */
 }
 
