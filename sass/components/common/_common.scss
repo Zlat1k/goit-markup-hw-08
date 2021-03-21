@@ -18,6 +18,12 @@
 //     display: none;
 // }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .section__header {
     color: var(--black-text);
     font-weight: 700;
