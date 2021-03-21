@@ -9,21 +9,33 @@
     }
 }
 
-.section__header {
+.section__header--team {
     color: var(--black-text);
     font-weight: 700;
     font-size: 28px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: center;
+    margin-bottom: 30px;
 
     @media screen and (min-width: 1200px) {
         font-size: 36px;
+        margin-bottom: 50px;
     }
 }
 
-.team-list__thumb {
-    height: 460px;
+// .team-list__thumb {
+//     height: 460px;
+// }
+
+.team-list {
+    @media screen and (min-width: 768px) {
+        margin-top: -30px;
+        margin-left: -30px;
+
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .team-list__images {
@@ -34,6 +46,19 @@
 
 .team-list__items {
     margin-top: 30px;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-basis: calc(100% / 2 - 30px);
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc(100% / 4 - 30px);
+    }
 }
 
 .team-list__names {
@@ -45,4 +70,53 @@
     text-align: center;
     margin-top: 30px;
     margin-bottom: 10px;
+}
+
+.team-list__profession {
+    color: var(--grey-text);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.team-list__cards {
+    background-color: var(--white-text);
+    padding-bottom: 30px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team-contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.team-contacts__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.team-contacts__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    color: #afb1b8;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: var(--blue-text);
+        color: var(--white-text);
+    }
+}
+
+.team-contacts__svg {
+    fill: currentColor;
 }
