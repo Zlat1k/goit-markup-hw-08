@@ -3,8 +3,10 @@
     left: 0;
     top: 0;
     background-color: white;
-    transform: translateX(100%);
+    // transform: translateX(100%);
     width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (min-width: 768px) {
@@ -14,4 +16,114 @@
 
 .is-open {
     transform: translateX(0);
+}
+
+.options-menu__button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    padding: 11px;
+    cursor: pointer;
+    border: 1px solid red;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        fill: var(--blue-text);
+    }
+}
+
+.options-menu__icon {
+    display: block;
+}
+
+.options-nav__link {
+    color: var(--black-text);
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    transition: color var(--blue-text) cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--blue-text);
+    }
+}
+
+// .options-nav__link:not(:last-child) {
+//     margin-bottom: 32px;
+// }
+
+.options-contacts__link--tel {
+    color: var(--blue-text);
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    @media screen and (max-width: 400px) {
+        font-size: 26px;
+    }
+}
+
+.options-contacts__link--email {
+    color: var(--grey-text);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+}
+
+.options-nav__list {
+    margin-bottom: 302px;
+}
+
+.options-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.options-network {
+    display: flex;
+    align-items: center;
+}
+
+.options-network__item:not(:last-child) {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 22px;
+        background-color: rgba(33, 33, 33, 0.2);
+        margin-left: 10px;
+    }
+}
+
+.options-network__link {
+    color: var(--blue-text);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    // margin-right: 20px;
+
+    @media screen and (max-width: 400px) {
+        font-size: 12px;
+    }
+}
+
+.options-contacts {
+    margin-bottom: 64px;
+}
+
+.options-contacts__item:not(:last-child) {
+    margin-bottom: 32px;
 }
