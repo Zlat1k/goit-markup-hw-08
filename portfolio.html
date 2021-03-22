@@ -47,9 +47,11 @@
                         >
                     </li>
                 </ul>
-                <svg class="icon-menu" width="40" height="40">
-                    <use href="./images/icons.svg#icon-menu"></use>
-                </svg>
+                <button class="header__button menu-toggle js-open-menu" type="button" data-menu-open>
+                    <svg class="icon-menu" width="40" height="40">
+                        <use href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
             </div>
         </header>
         <main>
@@ -325,5 +327,49 @@
                 </div>
             </div>
         </footer>
+        <div class="options-menu js-menu-container" data-menu>
+            <button type="button" class="options-menu__button menu-toggle js-close-menu" data-menu-close>
+                <svg class="options-menu__icon" width="19px" height="19px">
+                    <use href="./images/icons.svg#vector"></use>
+                </svg>
+            </button>
+            <nav class="options-nav">
+                <ul class="options-nav__list">
+                    <li class="options-nav__item">
+                        <a href="./index.html" class="options-nav__link">Студия</a>
+                    </li>
+                    <li class="options-nav__item">
+                        <a href="./portfolio.html" class="options-nav__link options-nav__link--current">Портфолио</a>
+                    </li>
+                    <li class="options-nav__item">
+                        <a href="#contacts" class="options-nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="options-contacts">
+                <li class="options-contacts__item">
+                    <a href="tel:+380961111111" class="options-contacts__link options-contacts__link--tel">+38 096 111 11 11</a>
+                </li>
+                <li class="mobile-contacts__item">
+                    <a href="mailto:info@devstudio.com" class="options-contacts__link options-contacts__link--email">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="options-network">
+                <li class="options-network__item">
+                    <a href="https://instagram.com/" class="options-network__link">Instagram</a>
+                </li>
+
+                <li class="options-network__item">
+                    <a href="https://twitter.com/" class="options-network__link">Twitter</a>
+                </li>
+                <li class="options-network__item">
+                    <a href="https://facebook.com/" class="options-network__link">Facebook</a>
+                </li>
+                <li class="options-network__item">
+                    <a href="https://linkedin.com/" class="options-network__link">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+        <script src="./js/mobile-menu.js"></script>
     </body>
 </html>

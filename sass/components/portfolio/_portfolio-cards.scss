@@ -44,6 +44,8 @@
 
 .card-set__image {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-set__content {
@@ -73,7 +75,7 @@
 .card-set__thumb {
     position: relative;
     overflow: hidden;
-    height: 294;
+    height: 294px;
 
     @media screen and (max-width: 479px) {
         height: auto;
@@ -94,6 +96,24 @@
     background-color: rgba(33, 150, 243, 0.9);
     color: var(--white-text);
     /* transition: color var(--duration-var) var(--timing-function); */
+
+    @media screen and (max-width: 440px) {
+        display: flex;
+        align-items: center;
+        padding: 24px;
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: 767px) {
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        align-items: center;
+        padding: 49px 24px;
+    }
 }
 
 .card-set__item {
