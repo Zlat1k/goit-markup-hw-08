@@ -74,6 +74,10 @@
     position: relative;
     overflow: hidden;
     height: 294;
+
+    @media screen and (max-width: 479px) {
+        height: auto;
+    }
 }
 
 .card-set__overlay {

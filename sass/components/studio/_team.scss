@@ -24,9 +24,20 @@
     }
 }
 
-// .team-list__thumb {
-//     height: 460px;
-// }
+.team-list__thumb {
+    max-height: 460px;
+    // max-width: 450px;
+
+    @media screen and (min-width: 768px) {
+        height: 374px;
+        // max-width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 260px;
+        // max-width: 270px;
+    }
+}
 
 .team-list {
     @media screen and (min-width: 768px) {
